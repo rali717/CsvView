@@ -12,5 +12,83 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+<StackPanel>
+
+    <DockPanel VerticalAlignment="Top">
+    <Menu DockPanel.Dock="Bottom">
+      <MenuItem Header="_File">
+        <MenuItem Header="_Open..."/>
+        <Separator/>
+        <MenuItem Header="_Exit"/>
+      </MenuItem>
+
+      <MenuItem Header="_Edit">
+        <MenuItem Header="Copy"/>
+        <MenuItem Header="Paste"/>
+      </MenuItem>
+
+           
+      <MenuItem Header="_Info">
+        <MenuItem Header="Credits"/>
+        <MenuItem Header="About"/>
+      </MenuItem>
+    </Menu>
+
+  </DockPanel>
+
+ <Grid ColumnDefinitions="*, 6, *, 6, *"
+                  RowDefinitions="*, 6, *, 6, *"
+                  Height="1000"
+                  Margin="0"
+                  >
+                <Rectangle Grid.Row="0"
+                           Grid.Column="0"
+                           Fill="Blue" />
+                <Rectangle Grid.Row="0"
+                           Grid.Column="2"
+                           Fill="Red" />
+                <Rectangle Grid.Row="0"
+                           Grid.Column="4"
+                           Fill="Brown" />
+                <Rectangle Grid.Row="2"
+                           Grid.Column="0"
+                           Fill="Yellow" />
+                <Rectangle Grid.Row="2"
+                           Grid.Column="2"
+                           Fill="Green" />
+                <Rectangle Grid.Row="2"
+                           Grid.Column="4"
+                           Fill="Red" />
+                <Rectangle Grid.Row="4"
+                           Grid.Column="0"
+                           Fill="Red" />
+                <Rectangle Grid.Row="4"
+                           Grid.Column="2"
+                           Fill="Yellow" />
+                <Rectangle Grid.Row="4"
+                           Grid.Column="4"
+                           Fill="Blue" />
+                <GridSplitter Grid.Column="1"
+                              Grid.RowSpan="5"
+                              Background="Orange"
+                              ResizeDirection="Columns"
+                              VerticalAlignment="Stretch" />
+                <GridSplitter Grid.Column="3"
+                              Grid.RowSpan="5"
+                              Background="Orange"
+                              ResizeDirection="Columns"
+                              VerticalAlignment="Stretch" />
+                <GridSplitter Grid.Row="1"
+                              Grid.ColumnSpan="5"
+                              Background="Orange"
+                              ResizeDirection="Rows"
+                              HorizontalAlignment="Stretch" />
+                <GridSplitter Grid.Row="3"
+                              Grid.ColumnSpan="5"
+                              Background="Orange"
+                              ResizeDirection="Rows"
+                              HorizontalAlignment="Stretch" />
+            </Grid>
+
+</StackPanel>
 </UserControl>
