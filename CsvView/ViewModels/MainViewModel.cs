@@ -13,6 +13,11 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Avalonia.Controls;
+using Avalonia.Platform.Storage;
+using Avalonia.Interactivity;
+using AvaloniaDialogs.Views;
+using System.Threading.Tasks;
 
 
 namespace CsvView.ViewModels;
@@ -28,7 +33,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly ObservableCollection<ObservablePoint> _values = new();
 
     public MainViewModel()
-    
+
     {
         var trend = 1000;
         var r = new Random();
@@ -45,7 +50,8 @@ public partial class MainViewModel : ViewModelBase
                 Values = _values,
                 GeometryStroke = null,
                 GeometryFill = null,
-                DataPadding = new(0, 1)
+                DataPadding = new(0, 1),
+                LineSmoothness = 0
             }
         };
 
@@ -134,4 +140,18 @@ public partial class MainViewModel : ViewModelBase
     {
         _isDown = false;
     }
+
+
+
+    [RelayCommand]
+    public async Task OpenFilePickerAsync(PointerCommandArgs args)
+    {   Console.WriteLine("Hello World, Welcome to C#!");
+        SingleActionDialog dialog = new()
+        {
+            Message = "Hello from C# code!",
+            ButtonText = "Click me!"
+        };
+        await dialog.ShowAsync();
+    }
+
 }

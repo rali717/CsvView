@@ -18,7 +18,7 @@
     <DockPanel VerticalAlignment="Top">
     <Menu DockPanel.Dock="Bottom">
       <MenuItem Header="_File">
-        <MenuItem Header="_Open..."/>
+        <MenuItem Header="_Open..." Command="{Binding OpenFilePickerAsync}"/>
         <Separator/>
         <MenuItem Header="_Exit"/>
       </MenuItem>
@@ -99,7 +99,8 @@
                     XAxes="{Binding ScrollableAxes}"
                     ZoomMode="X"
                     DrawMargin="{Binding Margin}"
-                    UpdateStartedCommand="{Binding ChartUpdatedCommand}">
+                    UpdateStartedCommand="{Binding ChartUpdatedCommand}"
+                    EasingFunction="{x:Null}">
                 </lvc:CartesianChart>
 
                 <lvc:CartesianChart
@@ -114,7 +115,8 @@
                     PointerPressedCommand="{Binding PointerDownCommand}"
                     PointerMoveCommand="{Binding PointerMoveCommand}"
                     PointerReleasedCommand="{Binding PointerUpCommand}"
-                    TooltipPosition="Hidden">
+                    TooltipPosition="Hidden"
+                    EasingFunction="{x:Null}">
                 </lvc:CartesianChart>
 
             </Grid>
