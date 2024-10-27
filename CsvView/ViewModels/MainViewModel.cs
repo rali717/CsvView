@@ -143,15 +143,18 @@ public partial class MainViewModel : ViewModelBase
 
 
 
-    [RelayCommand]
-    public async Task OpenFilePickerAsync(PointerCommandArgs args)
-    {   Console.WriteLine("Hello World, Welcome to C#!");
-        SingleActionDialog dialog = new()
-        {
-            Message = "Hello from C# code!",
-            ButtonText = "Click me!"
-        };
-        await dialog.ShowAsync();
-    }
+    // [RelayCommand]
+    // public async Task OpenFilePickerAsync(PointerCommandArgs args)
+    // {   Console.WriteLine("Hello World, Welcome to C#!");
+    //     SingleActionDialog dialog = new()
+    //     {
+    //         Message = "Hello from C# code!",
+    //         ButtonText = "Click me!"
+    //     };
+    //     _ = await dialog.ShowAsync();
+
+    // }
+
+
 
 }

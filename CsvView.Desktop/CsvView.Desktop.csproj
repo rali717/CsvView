@@ -19,6 +19,7 @@
     <PackageReference Include="AvaloniaDialogs" Version="3.6.0" />
     <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc3.3" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.1" />
+    <PackageReference Include="Nlnet.Avalonia.DevTools" Version="1.0.1-local.47" />
 
 
   </ItemGroup>
